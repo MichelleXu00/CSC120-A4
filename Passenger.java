@@ -19,9 +19,8 @@ public class Passenger implements PassengerRequirements{
         try {
             c.addPassenger(this);
         } catch (RuntimeException e) {
-            throw new RuntimeException (e);
+            throw new RuntimeException ("The car is full.");
         }
-        
     }
 
     /**
@@ -32,9 +31,8 @@ public class Passenger implements PassengerRequirements{
         try {
             c.removePassenger(this);
         } catch (RuntimeException e) {
-            throw new RuntimeException (e);
+            throw new RuntimeException ("The passenger is not on the car.");
         }
-        
     }
     
     public String toString() {
